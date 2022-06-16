@@ -27,7 +27,7 @@ def ignorar(cadena, posicion):
                     break;
                 if cadena[i]=="1":
                     print("Fin Programa")
-                    break;
+                    return 'heloi';
         if cadena[i]=="0":
             cadena2[i]='Z'
             i+=1;
@@ -56,13 +56,13 @@ def ignorar(cadena, posicion):
 def inicio(lista):
     for i in range(len(lista)):
       if cadena[i]=="S":
-        print(ignorar(cadena,i))
+        return(ignorar(cadena,i))
 
-cadena="A0111B0111C0000T0000S010011"
+cadena="A0111B0111C0000T0000S010011111"
 lista= list(cadena)
 print(lista)
-inicio(lista)
-
+otra=inicio(lista)
+print(otra)
         
 
 
