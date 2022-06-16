@@ -1,5 +1,4 @@
 
-
 def ignorarAv(cadena,semaforo):
         tamaño=len(cadena)-1;
         for i in range(tamaño):
@@ -43,7 +42,7 @@ def asignarValor(cadena,pocision):
                             if(cadena2[i-1]=='0'):
                                 cadena2[i-1]='X'
                                 cadena2[asignar(cadena2)]='X';                     
-                    return cadena2;
+                    return cambiar(cadena2);
               if cadena2[pocision]=="0":
                     cadena2[pocision]="X"
                     l= ignorarAv(cadena2,"B");
@@ -58,7 +57,8 @@ def asignarValor(cadena,pocision):
                                     cadena2[i-1]='Y'
                                 if(cadena2[i-1]=='0'):
                                     cadena2[i-1]='X'
-                    return cadena2;
+                    
+                    return cambiar(cadena2)
               if cadena2[pocision]=='0':
                     cadena2[pocision]="Z"
                     l= ignorarAv(cadena2,"B");
@@ -73,3 +73,13 @@ def asignarValor(cadena,pocision):
             if cadena[pocision]=="1":
               print("T")
 
+def cambiar(cadena):
+  for i in range(len(cadena)):
+    cadena=list(cadena)
+    if cadena[i]=="X":
+          cadena[i]='0'
+    if cadena[i]=="Y":
+          cadena[i]='1'
+    if cadena[i]=="S":
+          break;
+  return cadena

@@ -1,5 +1,7 @@
 from operator import le
+from re import A
 from asignarValor import asignarValor;
+from asignarVariable import asignarVariable;
 
 def ignorar(cadena, posición):
     cadena2=list(cadena)
@@ -33,8 +35,9 @@ def ignorar(cadena, posición):
                     print("Asignar Valor")
                     return asignarValor(cadena2,i)
                 if cadena[i]=="1":
+                    cadena2[i]='Z'
                     print("Asignar Variable")
-                    break;
+                    return asignarVariable(cadena2,i)
             if cadena[i+1]=="1":
                 i+=1;
                 if cadena[i]=="0":
@@ -44,11 +47,16 @@ def ignorar(cadena, posición):
                     print("Sumar")
                     break;
 
-cadena="A0000B0000COOOOTOOOOS00000100110"
+def inicio(lista):
+    for i in range(len(lista)):
+      if cadena[i]=="S":
+        print(ignorar(cadena,i))
+
+cadena="A0000B0110C1111T0000S00100100000"
 lista= list(cadena)
-for i in range(len(lista)):
-    if cadena[i]=="S":
-     print(ignorar(cadena,i))
+print(lista)
+inicio(lista)
+
         
 
 
