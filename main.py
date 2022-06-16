@@ -1,4 +1,5 @@
-from automata import automata;
+from operator import le
+from asignarValor import asignarValor;
 
 def ignorar(cadena, posición):
     cadena2=list(cadena)
@@ -43,33 +44,7 @@ def ignorar(cadena, posición):
                     print("Sumar")
                     break;
 
-def asignarValor(cadena,pocision):
-    cadena2=list(cadena)
-    cadena2[pocision]='Z'
-    pocision+=1; 
-    if cadena[pocision]=="0":
-        cadena2[pocision]='Z'
-        pocision+=1;
-        if cadena[pocision]=="0":
-           cadena2[pocision]='Z'
-           print("A")
-           pocision+=3
-           if cadena[pocision]=="0":
-                print("Cambiar a A 0")
-                return;
-           if cadena[pocision]=="1":
-                print("Cambiar a A 1")
-                cadena2[pocision+1]='Z'
-                return cadena2
-        if cadena[pocision]=="1":
-           print("B")
-    elif cadena[pocision]=="1":
-        pocision+=1;
-        if cadena[pocision]=="0":
-           print("C")
-        if cadena[pocision]=="1":
-           print("T")
-cadena="A0000B0000COOOOTOOOOS000001011"
+cadena="A0000B0000COOOOTOOOOS00000100110"
 lista= list(cadena)
 for i in range(len(lista)):
     if cadena[i]=="S":
