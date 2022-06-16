@@ -110,9 +110,18 @@ def cambiar(cambiar, nueva,lista):
             for k in range(len(lista)):
                 if lista[k]==cambiar:
                     lista[k-j]='X'
-    return lista
+    return cambiar2(lista)
 
-
+def cambiar2(cadena):
+  for i in range(len(cadena)):
+    cadena=list(cadena)
+    if cadena[i]=="X":
+          cadena[i]='0'
+    if cadena[i]=="Y":
+          cadena[i]='1'
+    if cadena[i]=="S":
+          break;
+  return cadena
 
             
 

@@ -1,12 +1,11 @@
-from operator import le
-from re import A
 from asignarValor import *;
 from desplazar import desplazar;
 from asignarVariable import asignarVariable;
+from inicioRepetir import repetir;
 
 def ignorar(cadena, posicion):
     cadena2=list(cadena)
-    for i in range(posicion,len(cadena)):
+    for i in range(posicion,len(cadena2)):
         if cadena[i]=="1":
             print(cadena[i])
             i+=1;
@@ -17,7 +16,7 @@ def ignorar(cadena, posicion):
                     break;
                 if cadena[i]=="1":
                     print("Inicio Repetir")
-                    break;
+                    return repetir(cadena2)
             if cadena[i]=="1":
                 print(cadena[i])
                 i+=1;
@@ -37,18 +36,18 @@ def ignorar(cadena, posicion):
                 if cadena[i]=="0":
                     cadena2[i]='Z'
                     print("Asignar Valor")
-                    return asiganarV(cadena2,i+1)
+                    asiganarV(cadena2,i+1)
                 if cadena[i]=="1":
                     cadena2[i]='Z'
                     print("Asignar Variable")
-                    return asignarVariable(cadena2,i)
+                    print(asignarVariable(cadena2,i))
             if cadena[i]=="1":
                 cadena2[i]='Z'
                 i+=1;
                 if cadena[i]=="0":
                     cadena2[i]='Z'
                     print("Desplazar")
-                    return desplazar(cadena2,i+1)
+                    print(desplazar(cadena2,i+1))
                 if cadena[i]=="1":
                     print("Sumar")
                     break;
@@ -58,7 +57,7 @@ def inicio(lista):
       if cadena[i]=="S":
         return(ignorar(cadena,i))
 
-cadena="A0111B0111C0000T0000S010011111"
+cadena="A0111B0111C0100T0000S010001"
 lista= list(cadena)
 print(lista)
 otra=inicio(lista)

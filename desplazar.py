@@ -10,7 +10,7 @@ def desplazar(cadena,posicion):
                     return desplazarI(cadena,'A')
                   if cadena[posicion+2]=='1':
                         cadena[posicion+2]='Z'
-                        return desplazarD(cadena,'A')
+                        return desplazarD(cadena,'B')
             if cadena[posicion+1]=='1':
                   print("B")
                   cadena[posicion+1]='Z'
@@ -30,7 +30,7 @@ def desplazar(cadena,posicion):
                         return desplazarI(cadena,'C')
                   if cadena[posicion+2]=='1':
                         cadena[posicion+2]='Z'
-                        return desplazarD(cadena,'C')
+                        return desplazarD(cadena,'T')
             if cadena[posicion+1]=='1':
                   print("T")
                   cadena[posicion+1]='Z'
@@ -39,7 +39,7 @@ def desplazar(cadena,posicion):
                         return desplazarI(cadena,'T')
                   if cadena[posicion+2]=='1':
                         cadena[posicion+2]='Z'
-                        return desplazarD(cadena,'T')
+                        return desplazarD(cadena,'S')
 
 def desplazarI(lista,variable):
     lista=list(lista);
