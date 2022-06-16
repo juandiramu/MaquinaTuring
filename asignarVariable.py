@@ -31,6 +31,7 @@ def asignarVariable(lista,posicion):
                if lista[posicion+4]=='0':
                     lista[posicion+4]='Z'
                     print('Cambiar B por A')
+                    return cambiar("C","B",lista)
                if lista[posicion+4]=='1':
                     lista[posicion+4]='Z'
                     print('Cambiar B por B')
@@ -40,9 +41,11 @@ def asignarVariable(lista,posicion):
                 if lista[posicion+4]=='0':
                     lista[posicion+4]='Z'
                     print('Cambiar B por C')
+                    return cambiar("C","T",lista)
                 if lista[posicion+4]=='1':
                     lista[posicion+4]='Z'
                     print('Cambiar B por T')
+                    return cambiar("C","S",lista)
     if lista[posicion+1]=='1':
         lista[posicion+1]='Z'
         if lista[posicion+2]=='0':
@@ -52,9 +55,11 @@ def asignarVariable(lista,posicion):
                if lista[posicion+4]=='0':
                     lista[posicion+4]='Z'
                     print('Cambiar C por A')
+                    return cambiar("T","B",lista)
                if lista[posicion+4]=='1':
                     lista[posicion+4]='Z'
                     print('Cambiar C por B')
+                    return cambiar("T","C",lista)
             if lista[posicion+3]=='1':
                 lista[posicion+3]='Z'
                 if lista[posicion+4]=='0':
@@ -64,6 +69,7 @@ def asignarVariable(lista,posicion):
                 if lista[posicion+4]=='1':
                     lista[posicion+4]='Z'
                     print('Cambiar C por T')
+                    return cambiar("T","S",lista)
         if lista[posicion+2]=='1':
             lista[posicion+2]='Z'
             if lista[posicion+3]=='0':
@@ -71,14 +77,17 @@ def asignarVariable(lista,posicion):
                if lista[posicion+4]=='0':
                     lista[posicion+4]='Z'
                     print('Cambiar T por A')
+                    return cambiar("S","B",lista)
                if lista[posicion+4]=='1':
                     lista[posicion+4]='Z'
                     print('Cambiar T por B')
+                    return cambiar("S","C",lista)
             if lista[posicion+3]=='1':
                 lista[posicion+3]='Z'
                 if lista[posicion+4]=='0':
                     lista[posicion+4]='Z'
                     print('Cambiar T por C')
+                    return cambiar("S","T",lista)
                 if lista[posicion+4]=='1':
                     lista[posicion+4]='Z'
                     print('Cambiar T por T')
