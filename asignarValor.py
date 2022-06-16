@@ -7,8 +7,21 @@ def asiganarV(cadena,posicion):
                   print("A")
                   cadena[posicion+1]='Z'
                   return cambiar2(cadena,'B',posicion+2)
+            if cadena[posicion+1]=='1':
+                  print("B")
+                  cadena[posicion+1]='Z'
+                  return cambiar2(cadena,'C',posicion+2)
       if cadena[posicion]=='1':
-            print("B")
+            cadena[posicion]='Z'
+            if cadena[posicion+1]=='0':
+                  print("C")
+                  cadena[posicion+1]='Z'
+                  return cambiar2(cadena,'T',posicion+2)
+            if cadena[posicion+1]=='1':
+                  print("T")
+                  cadena[posicion+1]='Z'
+                  return cambiar2(cadena,'S',posicion+2)
+      
 
 def cambiar2(cadena,variable,posicion):
       lista=list(cadena)
