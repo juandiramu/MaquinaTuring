@@ -23,7 +23,34 @@ def complementoA2(cadena,posicion):
 
 def calculo(cadena,variable):
     cadena=list(cadena)
-    j=len(cadena)-1
     for i in range(len(cadena)):
-        if cadena[j-i]==variable:
-            print
+        if cadena[i]==variable:
+            if cadena[i-1]=='0' and cadena[i-2]=='0' and cadena[i-3]=='0' and cadena[i-4]=='0':
+                  return cadena
+            if cadena[i-1]=='1':
+                  for k in range(1,4):
+                        if cadena[i-1-k]=="1":
+                              cadena[i-1-k]='0'
+                        elif cadena[i-1-k]=='0':
+                              cadena[i-1-k]='1'
+                  return cadena
+            if cadena[i-2]=='1':
+                  for k in range(1,3):
+                        if cadena[i-1-k]=='1':
+                              cadena[i-1-k]='0'
+                        elif cadena[i-1-k]=='0':
+                              cadena[i-1-k]='1'
+                  return cadena
+            if cadena[i-3]=='1':
+                  for k in range(1,2):
+                        if cadena[i-1-k]=='1':
+                              cadena[i-1-k]='0'
+                        elif cadena[i-1-k]=='0':
+                              cadena[i-1-k]='1'
+            if cadena[i-4]=='1':
+                  for k in range(1,1):
+                        if cadena[i-1-k]=='1':
+                              cadena[i-1-k]='0'
+                        elif cadena[i-1-k]=='0':
+                              cadena[i-1-k]='1'
+            
